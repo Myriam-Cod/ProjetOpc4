@@ -5,11 +5,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class AnalyticsCounter {
-	private static int headacheCount = 0;	// initialize to 0
-	private static int rashCount = 0;		// initialize to 0
-	private static int pupilCount = 0;		// initialize to 0
 	
 	public static void main(String args[]) throws Exception {
+		int headacheCount = 0;	// initialize to 0
+		int rashCount = 0;		// initialize to 0
+		int pupilCount = 0;		// initialize to 0
 		
 		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));
 
