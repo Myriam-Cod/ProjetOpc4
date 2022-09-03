@@ -1,5 +1,5 @@
 package com.hemebiotech.analytics;
 
-public class ISymptomWritter {
-	
+public class SymptomSort {
+
 }
