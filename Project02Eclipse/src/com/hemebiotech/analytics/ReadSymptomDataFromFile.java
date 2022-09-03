@@ -13,10 +13,10 @@ import java.util.List;
  */
 public class ReadSymptomDataFromFile implements ISymptomReader{
 
-	private String filepath = "Project02Eclipse/symptoms.txt";
+	private String filepath;
 	
 
-	public ReadSymptomDataFromFile (String filepath){
+	public ReadSymptomDataFromFile(String filepath){
 	
 		this.filepath = filepath;
 	}
@@ -24,17 +24,17 @@ public class ReadSymptomDataFromFile implements ISymptomReader{
 	public List<String> GetSymptoms(){
 		ArrayList<String> result = new ArrayList<String>();
 	
-		if (filepath != null){
+		if(filepath != null){
 			try {
 				BufferedReader reader = new BufferedReader (new FileReader(filepath));
 				String line = reader.readLine();
 				
-				while (line != null){
+				while(line != null){
 					result.add(line);
 					line = reader.readLine();
 				}
 				reader.close();
-			} catch (IOException e){
+			} catch(IOException e){
 				e.printStackTrace();
 			}
 		}
