@@ -19,9 +19,11 @@ public class SymptomWriter {
 		try {
 			FileWriter writer = new FileWriter (writerFile);
 			for(String key : symptomMapList.keySet()) {
-				writer.write(key + " : " + symptomMapList.get(key));
-				writer.close();
+				System.out.println(key + " : " + symptomMapList.get(key));
+				writer.write(key + " : " + symptomMapList.get(key) + "\n");
+				
 			}
+			writer.close();
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

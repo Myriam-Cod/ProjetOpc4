@@ -19,7 +19,7 @@ public class AnalyticsCounter {
 		TreeMap<String, Integer> forTreeMapList = forList.fileListMap();
 		
 		SymptomWriter forWriteFile = new SymptomWriter(forTreeMapList, "Project02Eclipse/result.out");
-		
+		forWriteFile.generateFile();
 		
 	
 	}
