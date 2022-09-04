@@ -21,7 +21,6 @@ public class SymptomWriter {
 			for(String key : symptomMapList.keySet()) {
 				System.out.println(key + " : " + symptomMapList.get(key));
 				writer.write(key + " : " + symptomMapList.get(key) + "\n");
-				
 			}
 			writer.close();
 			
