@@ -9,14 +9,14 @@ public class AnalyticsCounter {
 	
 	public static void main(String args[]) throws Exception {	
 
-		// On récupère le fichier
+		// On récupére le fichier
 		ReadSymptomDataFromFile fileSymptoms = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
-		// On récupère la liste
+		// On récupére la liste
 		List<String> listFileSymptoms = fileSymptoms.GetSymptoms();
 		
-		SymptomSort listeComptee = new SymptomSort(listFileSymptoms);
+		SymptomSort forList = new SymptomSort(listFileSymptoms);
 		
-		TreeMap<String, Integer> listeMappee = listeComptee.fileListMap();
+		TreeMap<String, Integer> forTreeMapList = forList.fileListMap();
 	
 	}
 }

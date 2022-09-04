@@ -17,17 +17,23 @@ public class SymptomSort {
 
 	
 	public TreeMap<String, Integer> fileListMap() {
-		
-        
+
         // Create TreeMap
 		TreeMap<String, Integer> symptomMap = new TreeMap<String, Integer>();
-        
-        //For each pour parcourir la list
+		
+		//For each pour parcourir la list
         for(String theSymptom : symptomList) {
-        	Integer i = 1;
-        	symptomMap.get(theSymptom);
-        	symptomMap.put(theSymptom, i);
-        	
+        	System.out.println(theSymptom);
+        		Integer i = symptomMap.get(theSymptom);
+        		if(i == null) {
+        			i = 1;
+        		}else {	
+        			 i++;
+        		}
+        		System.out.println("else " + i);
+        		 //System.out.println(symptomMap.get(theSymptom));	
+            	symptomMap.put(theSymptom, i);
+
         }
         System.out.println(symptomMap);
         return symptomMap;
