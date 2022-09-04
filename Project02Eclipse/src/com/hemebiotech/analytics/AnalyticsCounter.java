@@ -6,7 +6,6 @@ import java.util.TreeMap;
 
 public class AnalyticsCounter {
 	
-	
 	public static void main(String args[]) throws Exception {	
 
 		// On récupére le fichier
@@ -16,7 +15,12 @@ public class AnalyticsCounter {
 		
 		SymptomSort forList = new SymptomSort(listFileSymptoms);
 		
+		//En treemap
 		TreeMap<String, Integer> forTreeMapList = forList.fileListMap();
+		
+		SymptomWriter forWriteFile = new SymptomWriter(forTreeMapList, "Project02Eclipse/result.out");
+		
+		
 	
 	}
 }
