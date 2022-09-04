@@ -23,17 +23,11 @@ public class SymptomSort {
 		
 		//For each pour parcourir la list
         for(String theSymptom : symptomList) {
-        	System.out.println(theSymptom);
-        		Integer i = symptomMap.get(theSymptom);
-        		if(i == null) {
-        			i = 1;
+        		if(symptomMap.get(theSymptom) == null) {
+        			symptomMap.put(theSymptom, 1);
         		}else {	
-        			 i++;
+        			symptomMap.put(theSymptom, symptomMap.get(theSymptom)+1);
         		}
-        		System.out.println("else " + i);
-        		 //System.out.println(symptomMap.get(theSymptom));	
-            	symptomMap.put(theSymptom, i);
-
         }
         System.out.println(symptomMap);
         return symptomMap;
