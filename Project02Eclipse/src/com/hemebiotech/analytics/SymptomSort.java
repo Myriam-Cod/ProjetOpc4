@@ -24,10 +24,12 @@ public class SymptomSort {
         
         //For each pour parcourir la list
         for(String theSymptom : symptomList) {
-        	
-       
+        	Integer i = 1;
+        	symptomMap.get(theSymptom);
+        	symptomMap.put(theSymptom, i);
         	
         }
+        System.out.println(symptomMap);
         return symptomMap;
 	}
 

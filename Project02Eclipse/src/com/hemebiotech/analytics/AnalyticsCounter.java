@@ -14,6 +14,9 @@ public class AnalyticsCounter {
 		// On récupère la liste
 		List<String> listFileSymptoms = fileSymptoms.GetSymptoms();
 		
+		SymptomSort listeComptee = new SymptomSort(listFileSymptoms);
+		
+		TreeMap<String, Integer> listeMappee = listeComptee.fileListMap();
 	
 	}
 }
