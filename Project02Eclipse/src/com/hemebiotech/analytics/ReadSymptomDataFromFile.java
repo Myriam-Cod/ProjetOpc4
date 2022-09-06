@@ -8,18 +8,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ * This class reads and retrieves lines from file 
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader{
 
+	/**
+	 * Variable that contains the file path
+	 */
 	private String filepath;
 
+	/**
+	 * Constructor
+	 * @param filepath
+	 */
 	public ReadSymptomDataFromFile(String filepath){
 	
 		this.filepath = filepath;
 	}
 	
+	/**
+	 * Method that retrieves the lines of the file and adds them to a list
+	 */
 	public List<String> GetSymptoms(){
 		ArrayList<String> result = new ArrayList<String>();
 	
@@ -31,7 +41,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader{
 				while(line != null){
 					result.add(line);
 					line = reader.readLine();
-					//System.out.println(line);
 				}
 				reader.close();
 			} catch(IOException e){
