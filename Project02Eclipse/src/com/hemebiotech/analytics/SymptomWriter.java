@@ -6,7 +6,8 @@ import java.util.TreeMap;
 
 /**
  * This class generates a file from a Treemap collection
- * @author Myriam 
+ * 
+ * @author Myriam
  *
  */
 public class SymptomWriter {
@@ -21,6 +22,7 @@ public class SymptomWriter {
 
 	/**
 	 * Constructor
+	 * 
 	 * @param symptomMapList
 	 * @param writerFile
 	 */
@@ -32,12 +34,13 @@ public class SymptomWriter {
 	public void generateFile() {
 
 		try {
-			FileWriter writer = new FileWriter (writerFile);
+			FileWriter writer = new FileWriter(writerFile);
 
 			/**
-			 * Foreach which loops through the treemap collection and writes each line to the file
+			 * Foreach which loops through the treemap collection and writes each line to
+			 * the file
 			 */
-			for(String key : symptomMapList.keySet()) {
+			for (String key : symptomMapList.keySet()) {
 				writer.write(key + " : " + symptomMapList.get(key) + "\n");
 			}
 			writer.close();

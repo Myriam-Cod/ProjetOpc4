@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class reads and retrieves lines from file 
+ * This class reads and retrieves lines from file
  *
  */
-public class ReadSymptomDataFromFile implements ISymptomReader{
+public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	/**
 	 * Variable that contains the file path
@@ -19,27 +19,28 @@ public class ReadSymptomDataFromFile implements ISymptomReader{
 
 	/**
 	 * Constructor
+	 * 
 	 * @param filepath
 	 */
-	public ReadSymptomDataFromFile(String filepath){
+	public ReadSymptomDataFromFile(String filepath) {
 		this.filepath = filepath;
 	}
 
 	/**
 	 * Method that retrieves the lines of the file and adds them to a list
 	 */
-	public List<String> GetSymptoms(){
+	public List<String> GetSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
-		if(filepath != null){
+		if (filepath != null) {
 			try {
-				BufferedReader reader = new BufferedReader (new FileReader(filepath));
+				BufferedReader reader = new BufferedReader(new FileReader(filepath));
 				String line = reader.readLine();
-				while(line != null){
+				while (line != null) {
 					result.add(line);
 					line = reader.readLine();
 				}
 				reader.close();
-			} catch(IOException e){
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
