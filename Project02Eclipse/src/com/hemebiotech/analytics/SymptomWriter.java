@@ -18,7 +18,7 @@ public class SymptomWriter {
 	 * Variable that contains the Treemap collection
 	 */
 	private TreeMap<String, Integer> symptomMapList;
-	
+
 	/**
 	 * Constructor
 	 * @param symptomMapList
@@ -28,12 +28,12 @@ public class SymptomWriter {
 		this.symptomMapList = symptomMapList;
 		this.writerFile = writerFile;
 	}
-	
+
 	public void generateFile() {
-		
+
 		try {
 			FileWriter writer = new FileWriter (writerFile);
-			
+
 			/**
 			 * Foreach which loops through the treemap collection and writes each line to the file
 			 */
@@ -41,7 +41,7 @@ public class SymptomWriter {
 				writer.write(key + " : " + symptomMapList.get(key) + "\n");
 			}
 			writer.close();
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
