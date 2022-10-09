@@ -29,7 +29,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	/**
 	 * Method that retrieves the lines of the file and adds them to a list
 	 */
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
 		if (filepath != null) {
 			try {

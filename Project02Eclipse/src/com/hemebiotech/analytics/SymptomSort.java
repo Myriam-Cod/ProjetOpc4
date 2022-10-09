@@ -24,12 +24,14 @@ public class SymptomSort {
 	 * @param symptomList
 	 */
 	public SymptomSort(List<String> symptomList) {
-		// TODO Auto-generated constructor stub
 		this.symptomList = symptomList;
 	}
 
 	public TreeMap<String, Integer> fileListMap() {
 
+		/**
+		 * Initializing a treemap type collection
+		 */
 		TreeMap<String, Integer> symptomMap = new TreeMap<String, Integer>();
 
 		/**
